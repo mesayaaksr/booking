@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './LiginSingup.css';
+import './LoginSingup.css';
 
 import user_icon from '../Assets/person.png'
 import email_icon from '../Assets/email.png'
@@ -29,9 +29,10 @@ const LoginSingup = () => {
             <img src={password_icon} alt="" />
             <input type="password" placeholder="Password"/>
         </div>
-        {action === "Sign up" ? <div></div> : <div className="forgot-password">Lost Password? <span>Click Here!</span></div>}
+        {action==="Sing Up"?<div></div>: <div className="forgot-password">Lost Password? <span>Click Here!</span></div>}
 
         <div className="submit-container">
+            
              <div className={action === "Login" ? "submit gray" : "submit"} onClick={()=>{setAction("Sing Up")}} >Sing Up</div>
              <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={()=>{setAction("Login")}}>Login</div>
             </div>
